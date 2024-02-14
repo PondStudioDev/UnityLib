@@ -27,7 +27,7 @@ public class UI_Inven : UI_Scene
         for (int i = 0; i < 8; i++)
         {
             GameObject inven_item = Managers.UI.MakeSubItem<UI_Inven_Item>(gridPanel.transform).gameObject;
-            inven_item.GetComponent<UI_Inven_Item>().SetInfo($"구원의 이기 : {i}");
+            inven_item.GetComponent<UI_Inven_Item>().SetInfo($"빨간 포션 : {i + 1 }");
                 //UI_Inven_Item.SetInfo;
         }
     }

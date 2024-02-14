@@ -58,6 +58,8 @@ public class PoolManager
             //DontDestroyOnLoad¿¡¼­ »©³»´Â ²Ä¼ö
             if (parent == null)
                 poolable.transform.parent = Managers.Scene.CurrentScene.transform;
+            else
+                poolable.transform.position = parent.position;
 
             poolable.transform.parent = parent;
             poolable.IsUsing = true;
@@ -102,6 +104,7 @@ public class PoolManager
 
     public Poolable Pop(GameObject original, Transform parent = null)
     {
+        Debug.Log(_pool.ContainsKey(original.name));
         if (_pool.ContainsKey(original.name) == false)
             CreatePool(original);
 
