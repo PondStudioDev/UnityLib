@@ -104,7 +104,6 @@ public class PoolManager
 
     public Poolable Pop(GameObject original, Transform parent = null)
     {
-        Debug.Log(_pool.ContainsKey(original.name));
         if (_pool.ContainsKey(original.name) == false)
             CreatePool(original);
 
